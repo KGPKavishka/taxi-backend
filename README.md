@@ -1,56 +1,56 @@
 # Taxi Booking Backend API
 
-A scalable and professional backend API for a Taxi Booking System built using NestJS, PostgreSQL, Prisma ORM, and Swagger OpenAPI documentation.
+A scalable and modular backend API for a Taxi Booking System built using NestJS, PostgreSQL, Prisma ORM, and Swagger OpenAPI documentation.
 
 ---
 
-## 🚀 Technologies Used
+# 🚀 Technologies Used
 
 - NestJS
 - TypeScript
 - PostgreSQL
 - Prisma ORM
 - Swagger OpenAPI
-- JWT Authentication
 - Class Validator
 - REST API Architecture
 
 ---
 
-## 📌 Project Overview
+# 📌 Project Overview
 
-This project is a backend system for a Taxi Booking Application.
+This project is a backend system developed for a Taxi Booking Application.
 
-The system is developed using NestJS with a modular architecture and PostgreSQL as the database. Prisma ORM is used for database management and Swagger is integrated for API documentation.
+The backend is built using NestJS with a modular architecture and PostgreSQL as the database system. Prisma ORM is used for database management and Swagger is integrated for API documentation and testing.
 
-This backend is designed for scalability, maintainability, and professional production-level development practices.
+The project is designed using clean and maintainable backend development practices.
 
 ---
 
-## ✨ Features
+# ✨ Features
 
-### User Management
+## User Management
 - Create Users
 - Get All Users
 - Get User By ID
 - Update Users
 - Delete Users
 
-### Authentication
-- JWT Authentication
-- Password Hashing
-- Protected Routes
+## Ride Management
+- Create Ride
+- Get All Rides
+- Update Ride
+- Delete Ride
 
-### Database
-- PostgreSQL Integration
+## Database Integration
+- PostgreSQL Database
 - Prisma ORM
-- Database Migration Support
+- Prisma Migrations
 
-### API Documentation
+## API Documentation
 - Swagger OpenAPI Integration
 - API Testing Interface
 
-### Validation
+## Validation
 - DTO Validation
 - Request Validation using class-validator
 
@@ -58,7 +58,7 @@ This backend is designed for scalability, maintainability, and professional prod
 
 # 📂 Project Structure
 
-```
+```bash
 src/
 │
 ├── prisma/
@@ -71,7 +71,11 @@ src/
 │   ├── users.service.ts
 │   └── users.module.ts
 │
-├── auth/
+├── rides/
+│   ├── dto/
+│   ├── rides.controller.ts
+│   ├── rides.service.ts
+│   └── rides.module.ts
 │
 ├── app.module.ts
 └── main.ts
@@ -81,19 +85,19 @@ src/
 
 # ⚙️ Installation Guide
 
-## 1️⃣ Clone Repository
+## Clone Repository
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
 ```
 
-## 2️⃣ Navigate Into Project
+## Navigate Into Project
 
 ```bash
 cd YOUR_REPOSITORY
 ```
 
-## 3️⃣ Install Dependencies
+## Install Dependencies
 
 ```bash
 npm install
@@ -108,8 +112,7 @@ Create a `.env` file in the root directory.
 Example:
 
 ```env
-DATABASE_URL="postgresql://postgres:password@localhost:5432/taxi_app"
-JWT_SECRET="your_secret_key"
+DATABASE_URL="your_database_url"
 PORT=3000
 ```
 
@@ -157,8 +160,8 @@ http://localhost:3000/api
 
 Swagger provides:
 - API endpoint documentation
-- Request/response testing
-- DTO visualization
+- API testing interface
+- Request and response visualization
 
 ---
 
@@ -171,29 +174,31 @@ Swagger provides:
 | GET | /users/:id | Get User By ID |
 | PATCH | /users/:id | Update User |
 | DELETE | /users/:id | Delete User |
+| POST | /rides | Create Ride |
+| GET | /rides | Get All Rides |
 
 ---
 
-# 🛠️ Commands
+# 🛠️ Useful Commands
 
 | Command | Description |
 |---------|-------------|
 | npm run start:dev | Start development server |
-| npm run build | Build project |
+| npm run build | Build application |
 | npm run start:prod | Run production build |
 | npx prisma studio | Open Prisma Studio |
-| npx prisma migrate dev | Run migrations |
+| npx prisma migrate dev | Run database migrations |
 
 ---
 
 # 📈 Future Improvements
 
+- Authentication System
 - Driver Module
 - Ride Booking Module
 - Real-time Ride Tracking
-- Payment Gateway Integration
+- Payment Integration
 - Admin Dashboard
-- Notifications System
 
 ---
 

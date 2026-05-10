@@ -24,3 +24,14 @@ model Driver {
   isAvailable   Boolean  @default(true)
   createdAt     DateTime @default(now())
 }
+
+model Ride {
+  id                Int      @id @default(autoincrement())
+  passengerName     String
+  pickupLatitude    Float
+  pickupLongitude   Float
+  destination       String
+  status            String   @default("PENDING")
+  driverId          Int?
+  createdAt         DateTime @default(now())
+}
